@@ -79,7 +79,7 @@ export default function Landing(){
 
  <section id="branches"><div className="wrap"><Head s="Find us" h="Branches" p="Three locations in Santa Rosa, Laguna. Same hours everywhere: 10:00 AM to 9:00 PM, daily."/>
   <div className="grid">{BR.map((b,i)=>(<motion.div className="card" key={b.id} {...rise(i)} whileHover={{y:-6}}><div className="bimg"><Photo src={b.img} alt={`Placeholder photo of the ${b.n} branch`}/></div>
-   {isOpen!==null&&<span className={'open'+(isOpen?'':' cl')}>{isOpen?'Open now · closes 9 PM':'Closed · opens 10 AM'}</span>}<h3>{b.n}</h3><p>{b.a}<br/>{b.t}<br/>{b.b.length} barber{b.b.length>1?'s':''}</p><span className="tag">Placeholder</span>
+   {isOpen!==null&&<span className={'open'+(isOpen?'':' shut')}>{isOpen?'Open now · closes 9 PM':'Closed · opens 10 AM'}</span>}<h3>{b.n}</h3><p>{b.a}<br/>{b.t}<br/>{b.b.length} barber{b.b.length>1?'s':''}</p><span className="tag">Placeholder</span>
    <button className="btn sm" style={{marginTop:12}} onClick={()=>book({br:b.id})}>Book here</button></motion.div>))}</div>
   <p className="note">Placeholder details: addresses and phone numbers are fictional until official information is provided.</p></div></section>
 
